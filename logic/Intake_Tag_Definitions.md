@@ -79,11 +79,32 @@ for question, answer in intake.items():
   'Buyer policy update,Investor requirement,Unclear / not explained'),
  'CSRD_reporting_request': 'Yes, explicitly,Yes, indirectly (e.g. “new EU requirements”),No,Not sure',
  'responsible_for_internal_SI': ('Dedicated role/team',
-  'Shared responsibility,Legal / compliance only',
-  'No clear owner'),
+  'Shared responsibility,Legal / compliance only', 'No clear owner'),
  'policy_internal_status': ('Yes', 'Draft / informal', 'No'),
  'data_tracking': ('Yes, structured', 'Informal / ad hoc', 'No'),
  'confidence_level': ('Confident', 'Somewhat confident', 'Not confident')}
+
+
+# Cell : Logic Tags for Questions (filtered logic / skipped logic)
+TAG_DEFS = {
+"CSRD_CASCADE_SIGNAL": "Buyer has referenced CSRD / EU reporting pressure.",
+"BUYER_OPACITY_RISK": "Drivers/requirements unclear; risk of guessing wrong.",
+"HRDD_RELEVANCE_HIGH": "Human rights due diligence is likely a buyer focus, even if not explicitly stated.",
+"GOVERNANCE_OWNER_GAP": "No clear internal owner for sustainability / social / environmental topics.", 
+"ENVIRONMENTAL_BASELINE_GAP": "No written environmental documents AND no environmental data tracking.",
+"POLICY_LIGHT": "Policies are missing or informal.",
+"DUAL_ROLE_PRESSURE": "Supplier is also a buyer, both roles.",
+"SUPPLIER_CONFIDENCE_LOW": "Respondent is not confident about responding to buyer's sustainability or human rights criteria for compliance"
+
+## Additional tags to be coded later into Intake Questions
+## "EU_EXPOSURE_NON_EU": "Non-EU supplier exposed to EU buyer/investor requests.",
+## "RISING_BUYER_DEMAND": "Requests are increasing in detail/frequency.",
+## "OWNER_GAP": "No clear internal owner for ESG/HR topics.",
+## "DATA_GAP": "Sustainability/social data tracking is missing or ad hoc.",
+## "ENV_RISK": "Environmental topics are being requested by buyers.",
+
+
+}
 
 
 
