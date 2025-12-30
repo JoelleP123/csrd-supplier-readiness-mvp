@@ -1,4 +1,4 @@
-# Cell: Dictionary of Question Tags (internal)
+# Dictionary of Question Tags (internal)
 QUESTION_TO_TAG = {
     
     # Section A
@@ -32,4 +32,15 @@ QUESTION_TO_TAG = {
     "How confident do you feel responding to buyer ESG, sustainability or human rights requests?" : "confidence_level"
 
 }
+
+# Convert Question Tags
+tags = {}
+
+for question, answer in intake.items():
+    tag = QUESTION_TO_TAG.get(question)
+    if tag is not None:
+        tags[tag] = answer
+
+tags
+
 
