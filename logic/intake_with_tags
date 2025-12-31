@@ -1,0 +1,136 @@
+## Cell : intake tags linked to logic tags with notes
+
+def derive_tags(intake: dict) -> list:
+    tags = []
+
+  # Section A:
+  
+#1
+if intake.get("operates_in_eu") == "Both," or "EU"":
+  tags.append("CSRD_CASCADE_SIGNAL")  
+  ##CONTEXT NOTE (non-EU + EU exposure): EU-linked buyers may request information to meet evolving sustainability reporting and risk expectations.
+  
+#2
+if intake.get("sells_to_eu_buyers") == "Not Sure":
+  tags.append("BUYER_OPACITY_RISK") 
+  tags.append("SUPPLIER_CONFIDENCE_LOW") 
+  
+#3
+if intake.get("company_size") == "large" and intake.get("operates_in_eu") == "Both" or "EU":
+  tags.append("CSRD_CASCADE_Signal")
+## CONTEXT NOTE (non-EU + EU exposure): EU-linked buyers may request more information from larger suppliers  to meet evolving sustainability reporting and risk expectations.  
+
+#4
+if intake.get("sector") == 
+  tags.append(" ")
+  
+#5
+if intake.get("value_chain_role") == "Supplier" and "buyer" 
+  tags.append(DUAL_ROLE_PRESSURE")
+
+ # Section B
+ 
+#6
+if intake.get("supply_chain_complexity") == "Mix of direct and indirect":
+  tags.append("DUAL_ROLE_PRESSURE")
+if intake.get("supply_chain_complexity") == "Highly multi-tiered":
+  tags.append("BUYER_OPACITY_RISK")
+if intake.get("supply_chain_complexity") == "Highly multi-tiered":
+  tags.append("HRDD_RELEVANCE_High")
+  
+ #7             
+if intake.get("sourcing_risk_H_Rights") == "Yes", "some" or "not sure"
+  tags.append("HRDD_RELEVANCE_HIGH") 
+  if intake.get("sourcing_risk_H_Rights") == "Yes", "some" or "not sure"
+  tags.append("BUYER_OPACITY_RISK") 
+  
+#8
+if intake.get("sourcing_laborissues") == "Yes" or "somewhat":
+  tags.append("HRDD_RELEVANCE_HIGH")
+
+## Section C              
+#9
+if intake.get("partner_ask_abt_climate") == "No":
+  tags.append("DOCUMENTATION_LIGHT")
+## to add in later as a note in the intake:
+## Use whenever buyer pressure = Yes or Expected soon:
+## WHY YOU’RE BEING ASKED:
+## These requests often increase when buyers update internal policies, respond to investor expectations, or adapt to changing EU sustainability requirements. Suppliers are 
+## frequently not given clear explanations—so uncertainty itself becomes a risk factor.
+#10
+if intake.get("which_topic_environment") == "Not Specified/Unclear":
+  tags.append("BUYER_OPACITY_RISK")
+if intake.get("which_topic_environment") ==
+
+#11
+if intake.get("recent_info_request") == "No":
+  tags.append("GOVERNANCE_OWNER_GAP")
+## to add in later as a note for the intake:
+## Use whenever buyer pressure = Yes or Expected soon:
+## WHY YOU’RE BEING ASKED: 
+## These requests often increase when buyers update internal policies, respond to investor expectations, or adapt to changing EU sustainability requirements. 
+## Suppliers are frequently not given clear explanations—so uncertainty itself becomes a risk factor.
+
+#12
+if intake.get("info_request_more_detailed") == "Yes, more detailed" or "Yes, somewhat more detailed":
+  tags.append("SUPPLIER_CONFIDENCE_LOW")
+## TBD check later = if intake.get("info_request_more_detailed") == "Yes, more detailed" or "Yes, somewhat more detailed":
+## TBD check later = tags.append("CSRD_CASCADE_SIGNAL")
+
+#13          
+if intake.get("opinion_prompt") == "CSRD Regulations":
+  tags.append("CSRD_CASCADE_SIGNAL")
+if intake.get("opinion_prompt") == "unclear/not explained":
+  tags.append("BUYER_OPACITY_RISK")
+if intake.get("opinion_prompt") == "unclear/not explained":
+  tags.append("SUPPLIER_CONFIDENCE_LOW")
+## “Assume that suppliers may be receiving requests influenced by regulatory changes even when legal obligations do not formally apply to them.” 
+
+#14              
+if intake.get("CSRD_reporting_request") == "Not sure":
+  tags.append("SUPPLIER_CONFIDENCE_LOW")
+if intake.get("CSRD_reporting_request") == "Yes, explicitly", or "Yes, indirectly (e.g. “new EU requirements”)": 
+  tags.append("CSRD_CASCADE_SIGNAL")
+
+# Section D
+#15
+if intake.get("policy_internal_status") == "No clear owner":
+  tags.append("SUPPLIER_CONFIDENCE_LOW")
+if intake.get("policy_internal_status") == "Shared responsibility" legal or compliance only, no clear owner
+  tags.append("SUPPLIER_CONFIDENCE_LOW")
+
+#16              
+if intake.get("policy_internal_status") == "draft/informal":
+  tags.append("HRDD_RELEVANCE_HIGH")
+if intake.get("policy_internal_status") == "draft/informal" or "no":
+  tags.append("DOCUMENTATION_LIGHT")
+if intake.get("policy_internal_status") == "no":
+  tags.append("ENVIRONMENTAL_BASELINE_GAP")
+if intake.get(" policy_internal_status") == "no":
+  tags.append("GOVERNANCE_OWNER_GAP")
+## Note: to ammend logic of question later:
+## No, if other questions are flagged: HRDD_RELEVANCE_HIGH
+      
+#17
+if intake.get("data_tracking") == "no" or "informal/ad hoc":
+  tags.append("ENVIRONMENTAL_BASELINE_GAP")
+if intake.get("data_tracking") == "no":
+  tags.append("GOVERNANCE_OWNER_GAP")
+if intake.get("data_tracking") == "no":
+  tags.append("DOCUMENTATION_LIGHT")
+
+#18             
+if intake.get("confidence_level") == "Not confident": 
+  tags.append("GOVERNANCE_OWNER_GAP")
+
+## Example I want to save : if intake.get("has_written_policies") == "No" and intake.get("tracks_sustainability_data") == "No":
+        ## tags.append("ENVIRONMENTAL_BASELINE_GAP")
+
+
+    return tags
+
+    applied_tags = derive_tags(intake)
+
+for tag in applied_tags:
+    print(f"{tag}: {TAG_DEFS[tag]}")
+
