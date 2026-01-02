@@ -10,7 +10,7 @@ st.caption("Decision-support triage for readiness and communication.")
 intake = {}
 
 st.header("Section A: Supplier Profile")
-for key, q in INTAKE_QUESTIONS.items():
+for key, q in intake_questions.items():
     intake[key] = st.selectbox(q["label"], [""] + q["options"], key=key)
 
 if st.button("Run screening"):
