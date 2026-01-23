@@ -30,21 +30,21 @@ The purpose of this product (repository) is to create a lightweight Supplier Bas
 - /outputs – example readiness output (TBD - for later)
 - /prompts – system prompt and assumptions (TBD - for later)
 
+
+## Note: This repo is illustrative; commercial use requires agreement
+### Note: This notebook demonstrates the AI reasoning layer of the product
+
+
 ## Workflow Description
+- Input: supplier intake answers (number of questions)
+- INTAKE_QUESTIONS → questions tag + list of options
+- answers_by_question → sentence → answer
+- normalized answers → internal keys → answer
 
-## Input: supplier intake answers (number of questions)
 
-## Step 1 — Normalize inputs
-- Convert answers into consistent keys/values
-
-## Step 2 — Apply rule-based tags
-
-## Step 3 — Generate readiness level
-- LOW / MEDIUM / HIGH based on tag counts and CSRD exposure signals
-
-## Step 4 — Generate output brief
+## Generated output brief
 - Readiness level
 - Tags triggered
-- Interpretation (1–2 sentences)
+- Assumptions printed
 - Top 3 next steps
 
