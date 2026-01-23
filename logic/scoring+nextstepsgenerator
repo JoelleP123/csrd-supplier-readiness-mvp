@@ -54,7 +54,33 @@ else:
 # --- Output ---
 print("\nScore:", score)
 print("Band:", band)
-print("Why:")
+print("Suggested Next Steps:")
+
+# --- Print sector baseline assumptions ---
+sector = a.get("sector")
+if sector and sector in SECTOR_BASELINE_ASSUMPTIONS:
+    print(f"\nBaseline assumptions for '{sector}':")
+    for assumption in SECTOR_BASELINE_ASSUMPTIONS[sector]:
+        print(f"  - {assumption}")
+else:
+    print(f"\nNo specific baseline assumptions found for sector: {sector}")
+
+# --- End print sector baseline assumptions ---
+
+print("Recommended Next Steps:")
+if reasons:
+    for r in reasons:
+        print("- ", r)
+else:
+    print("- (no reasons triggered; check whether applied_tags is empty)")
+
+# --- Print applied tags after the main assessment ---
+print("\nAll applied tags:")
+for t in applied_tags:
+    print(f"- {t}")
+print("Full applied tags list for reference:", applied_tags)
+
+
 if reasons:
     for r in reasons:
         print("- ", r)
