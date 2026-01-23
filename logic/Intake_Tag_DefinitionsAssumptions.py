@@ -30,8 +30,6 @@ def normalize_answers(answers_by_question: dict) -> dict:
             a[key] = ans
     return a
 
-a = normalize_answers(answers_by_question)
-print("Normalized answers keys:", list(a.keys()))
 
 #note: code question number 4 later, see below cell
 
