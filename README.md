@@ -30,11 +30,6 @@ The purpose of this product (repository) is to create a lightweight Supplier Bas
 - /outputs – example readiness output (TBD - for later)
 - /prompts – system prompt and assumptions (TBD - for later)
 
-
-## Note: This repo is illustrative; commercial use requires agreement
-### Note: This notebook demonstrates the AI reasoning layer of the product
-
-
 ## Workflow Description
 - Input: supplier intake answers (number of questions)
 - INTAKE_QUESTIONS → questions tag + list of options
@@ -47,4 +42,6 @@ The purpose of this product (repository) is to create a lightweight Supplier Bas
 - Tags triggered
 - Assumptions printed
 - Top 3 next steps
+
+## Note: This repo is illustrative; commercial use requires agreement
 
