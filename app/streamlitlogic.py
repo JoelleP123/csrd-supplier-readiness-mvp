@@ -7,7 +7,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 # NOW import your modules
 import streamlit as st
 from intake.intake_questions import INTAKE_QUESTIONS, QUESTION_TO_KEY
-from logic.Intake_Tag_Definitions+Assumptions import TAG_DEFS, derive_tags, SECTOR_BASELINE_ASSUMPTIONS
+from logic.Intake_Tag_DefinitionsAssumptions import TAG_DEFS, derive_tags, SECTOR_BASELINE_ASSUMPTIONS
 from logic.scoring_nextstepsgenerator import run_screening
 from logic.utils import normalize_answers
 
