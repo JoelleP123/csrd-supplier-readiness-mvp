@@ -6,16 +6,14 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # NOW import your modules
 import streamlit as st
+from intake.intake_questions import INTAKE_QUESTIONS, QUESTION_TO_KEY
 from logic.Intake_Tag_Definitions import TAG_DEFS, derive_tags, SECTOR_BASELINE_ASSUMPTIONS
 from logic.scoring_nextstepsgenerator import run_screening
-
-from logic.sector_assumptions import SECTOR_BASELINE_ASSUMPTIONS
-from logic.Intake_Tag_Definitions import TAG_DEFS, derive_tags
-from logic.scoring import run_screening
 from logic.utils import normalize_answers
 
 st.title("Supplier Baseline Screening (CSRD Friendly)")
 st.caption("Decision-support triage for readiness and communication.")
+
 
 # Initialize session state for answers
 if 'answers' not in st.session_state:
