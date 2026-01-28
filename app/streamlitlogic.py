@@ -53,7 +53,7 @@ tags_dict = {t: True for t in applied_tags}
     # Run screening
 results = run_screening(tags_dict)
     
-    st.subheader("Results")
+st.subheader("Results")
     st.json(results)  # You can prettify this later
 
 
