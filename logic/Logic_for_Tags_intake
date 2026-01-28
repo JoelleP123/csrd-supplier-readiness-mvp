@@ -164,10 +164,6 @@
 # --- Run tag derivation ---
 applied_tags = derive_tags(a)
 
-#Additional Notes:
-# Print tag descriptions  (won't crash if TAG_DEFS missing a key)
-# Removed the reference to TAG_DEFS which is defined in a later cell, to avoid NameError if run out of order.
-# Assuming TAG_DEFS will be defined globally or passed. For now, just print the tags.
 
 for t in applied_tags:
     print(f"{t}") # Removed TAG_DEFS.get to avoid NameError for now
