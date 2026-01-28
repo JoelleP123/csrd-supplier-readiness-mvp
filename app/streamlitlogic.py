@@ -8,7 +8,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import streamlit as st
 from intake.intake_questions import INTAKE_QUESTIONS, QUESTION_TO_KEY
 from logic.Intake_Tag_DefinitionsAssumptions import TAG_DEFS, derive_tags, SECTOR_BASELINE_ASSUMPTIONS
-from logic.scoringnextstepsgenerator import run_screening
+
 from logic.utils import normalize_answers
 
 st.title("Supplier Baseline Screening (CSRD Friendly)")
