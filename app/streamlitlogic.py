@@ -77,10 +77,9 @@ if st.button("Run screening"):
 
 # Debug + output section (safe to render even before button click)
 with st.expander("Debug", expanded=False):
-    # st.write("applied_tags:", st.session_state.applied_tags, type(st.session_state.applied_tags))
+     st.write("applied_tags:", st.session_state.applied_tags, type(st.session_state.applied_tags))
     
-# or:
-    st.code(f"type(applied_tags) = {type(applied_tags)}")
+
 
 
 st.subheader("Results")
