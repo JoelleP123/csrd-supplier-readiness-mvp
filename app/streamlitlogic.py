@@ -13,7 +13,7 @@ from logic.Intake_Tag_DefinitionsAssumptions import (
     derive_tags,
     SECTOR_BASELINE_ASSUMPTIONS,
 )
-from logic.utils import normalize_answers
+from logic.utils import normalize_answers 
 
 
 
@@ -77,7 +77,11 @@ if st.button("Run screening"):
 
 # Debug + output section (safe to render even before button click)
 with st.expander("Debug", expanded=False):
-    st.write("applied_tags:", st.session_state.applied_tags, type(st.session_state.applied_tags))
+    # st.write("applied_tags:", st.session_state.applied_tags, type(st.session_state.applied_tags))
+    st.write("applied_tags:", applied_tags, "type:", str(type(applied_tags)))
+# or:
+    # st.code(f"type(applied_tags) = {type(applied_tags)}")
+
 
 st.subheader("Results")
 if st.session_state.results is None:
