@@ -15,7 +15,7 @@ from logic.Intake_Tag_DefinitionsAssumptions import (
 )
 from logic.utils import normalize_answers
 
-from logic.scoringnextstepsgenerator import run_screening
+from logic.logic.scoringnextstepsgenerator import run_screening
 
 
 # --- TEMP: stub so the app loads even if real screening isn't wired yet ---
