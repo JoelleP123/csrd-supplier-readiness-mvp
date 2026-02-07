@@ -62,10 +62,12 @@ def run_screening(tags: dict) -> dict:
     }
 
 
-# --- Output ---
-print("\nScore:", score)
-print("Band:", band)
-print("Suggested Next Steps:")
+# --- Output --- taken out as test
+# print("\nScore:", score)
+# print("Band:", band)
+# print("Suggested Next Steps:")
+
+
 
 # --- Print sector baseline assumptions ---
 sector = a.get("sector")
