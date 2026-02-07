@@ -1,8 +1,11 @@
 # ----------------------------
 # Streamlit UI
 # ----------------------------
-st.title("Supplier Baseline Screening (Sandbox)")
-st.caption("Sandbox version: proves UI → normalize → tags → screening → report.")
+
+import streamlit as st
+
+st.title("Supplier Baseline Screening")
+st.caption("version: proves UI → normalize → tags → screening → report.")
 
 if "answers" not in st.session_state:
     st.session_state.answers = {}
